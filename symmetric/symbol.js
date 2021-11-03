@@ -9,11 +9,12 @@
 
 function symbol(str) {
   let arr = str.split(",");
-  let res = [];
-  let len = 0;
+  let res = []; // 这是那个桶
+  let len = 0; // 这是桶里面符号的个数
 
   for (let i = 0; i < arr.length; i++) {
     switch (arr[i]) {
+      // 如果是右侧，查找上一个
       case "}":
         if (res[len - 1] == '{') {
           res.pop()
@@ -39,18 +40,19 @@ function symbol(str) {
         }
         break;
       default:
+        // 如果是左侧，填入
         res.push(arr[i])
         len++
         break;
     }
   }
+  // 全部查完，如果桶里没有了，说明全部配对
   if (res.length == 0) {
     return true
   } else {
     return false
   }
 }
-
 
 let str = "{,},{,},[,(,),],{,[,(,),],}"
 console.log(symbol(str));

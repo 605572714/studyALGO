@@ -47,5 +47,6 @@ function countSort(arr) {
   console.log(res);
 }
 
-let arr = [4, 4, 6, 3, 6, 7, 2, 3, 1, 1, 1];
+// let arr = [4, 4, 6, 3, 6, 7, 2, 3, 1, 1, 1];
+let arr = [2, 3, 8, 7, 1, 2, 2, 8, 9]
 countSort(arr)
