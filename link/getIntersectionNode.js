@@ -4,18 +4,20 @@ let {
   generateArray
 } = require('./link');
 
-let arrA = [4, 1, 8, 4, 5]
-let arrB = [5, 0, 1, 8, 4, 5]
+let arrA = [1, 8, 4, 5]
+let arrB = [1, 8, 4, 5]
 
 let headA = generateLink(arrA)
 let headB = generateLink(arrB)
 var getIntersectionNode = function (headA, headB) {
   let a = headA;
   let b = headB;
+  console.log(a == b, 111);
   while (a !== b) {
     a = a == null ? headB : a.next;
     b = b == null ? headA : b.next;
   }
-  return a
+  // return a
+  console.log(a == b, 222);
 }
-// console.log(getIntersectionNode(headA, headB));
+// getIntersectionNode(headA, headB);

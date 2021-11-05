@@ -29,3 +29,27 @@ function preOrderTraversal(root) {
   }
   console.log(res);
 }
+
+
+
+
+class Emitter {
+  constructor(max) {
+    this.max = max
+    this.asyncIdx = 0
+  }
+  async *[Symbol.asyncIterator]() {
+    while (this.asyncIdx < this.max) {
+      yield new Promise((resolve) => resolve(this.asyncIdx++))
+    }
+  }
+}
+async function asyncCount(num) {
+  let emitter = new Emitter(num)
+  console.log(emitter);
+  for await (const x of emitter) {
+    console.log(x);
+  }
+}
+
+asyncCount(3)
