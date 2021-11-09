@@ -1,5 +1,3 @@
-// let str = "1,,2,3"
-// let arr = str.split(',').map(Number)
 let arr = [1, 2, 3, 4, 6, 7, 9]
 const tree = convertBinaryTree(arr);
 
