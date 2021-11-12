@@ -24,19 +24,50 @@
 
 
 var lengthOfLIS = function (nums) {
-  let max = 1;
-  for (let i = 0; i < nums.length; i++) {
-    let mmax = 1;
-    for (let j = 0; j < i; j++) {
-      if (nums[i] > nums[j]) mmax++
+  let len = 1,
+    n = nums.length;
+  if (n == 0) return 0;
+  let d = new Array(n + 1);
+  d[len] = nums[0];
+  for (let i = 1; i < n; ++i) {
+    if (nums[i] > d[len]) {
+      d[++len] = nums[i]
+    } else {
+      let l = 1,
+        r = len,
+        pos = 0;
+      while (l <= r) {
+        let mid = Math.floor((l + r) / 2);
+        if (d[mid] < nums[i]) {
+          pos = mid;
+          l = mid + 1
+        } else {
+          r = mid - 1
+        }
+      }
+      d[pos + 1] = nums[i]
     }
-    max = mmax > max ? mmax : max
   }
-  console.log(max);
+  console.log(d, len);
+  return len
+};
+
+var lengthOfLIS = function (nums) {
+  let dp = []
+  dp[0] = 1;
+  let maxAns = 1;
+  for (let i = 0; i < nums.length; i++) {
+    dp[i] = 1
+    for (let j = 0; j < i; j++) {
+      if (nums[j] < nums[i]) dp[i] = Math.max(dp[i], dp[j] + 1)
+    }
+    maxAns = Math.max(maxAns, dp[i])
+  }
+  console.log(maxAns);
+  return maxAns
 };
 
 
-
-let nums = [10, 9, 2, 5, 3, 7, 101, 18]
+let nums = [10, 9, 2, 11, 22, 33, 44, 3, 7, 5, 101, 18]
 
 lengthOfLIS(nums)
