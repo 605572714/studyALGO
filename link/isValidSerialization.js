@@ -34,31 +34,84 @@
 //   输入: "9,#,#,1"
 // 输出: false
 
-
+// 槽位保留法
 // var isValidSerialization = function (preorder) {
-//   // let arr = preorder.split(',')
-//   // let stack = [1]
-//   // for (let i = 0; i < arr.length; i++) {
-//   //   if (!stack.length) return false
-//   //   stack.pop()
-//   //   if (arr[i] !== '#') stack.push(1, 1)
-//   // }
-//   // console.log(stack.length === 0);
-//   // return stack.length === 0
-//   // ---
-//   let arr = preorder.split(',')
-//   let len = arr.length;
-//   let i = 0;
-//   while (arr.length >= 3) {
-//     if (arr[i] != "#" && arr[i + 1] == "#" && arr[i + 2] == "#") {
-//       arr[i] = "#";
-//       arr.splice(i + 1, 2);
-
+//   let arr = preorder.split(',');
+//   let stack = [1];
+//   for (let i = 0; i < arr.length; i++) {
+//     const item = arr[i];
+//     if (!stack.length) return false;
+//     const len = stack.length;
+//     if (item == "#") {
+//       stack[len - 1]--;
+//       if (stack[len - 1] == 0) stack.pop()
 //     } else {
-//       i++
+//       stack[len - 1]--;
+//       if (stack[len - 1] == 0) stack.pop()
+//       stack.push(2)
 //     }
 //   }
-
+//   return stack.length == 0
 // };
+// 升级版本
+// var isValidSerialization = function (preorder) {
+//   const arr = preorder.split(",");
+//   const len = arr.length;
+//   let slots = 1;
+//   for (let i = 0; i < len; i++) {
+//     if (slots == 0) return false;
+//     if (arr[i] == "#") {
+//       slots--
+//     } else {
+//       slots++
+//     }
+//   }
+//   return slots === 0
+// };
+// 如果一个数字后面出现连续两个#,则证明这个节点完整
+// var isValidSerialization = function (preorder) {
+//   const arr = preorder.split(",");
+//   const len = arr.length;
+//   let stack = [];
+//   for (let i = 0; i < len; i++) {
+//     stack.push(arr[i])
+//     while (stack.length >= 3 && stack[stack.length - 1] == "#" && stack[stack.length - 2] == "#" && stack[stack.length - 3] != "#") {
+//       stack.pop(), stack.pop(), stack.pop()
+//       stack.push('#')
+//     }
+//   }
+//   return stack.length == 1 && stack[0] == "#"
+// };
+// 递归方法
+// var isValidSerialization = function (preorder) {
+//   const arr = preorder.split(",");
+//   let isValid = true;
+//   let len = dfs(0, arr)
+//   return isValid && len == arr.length
 
-// isValidSerialization("9,3,4,#,#,1,#,#,2,#,6,#,#")
+//   function dfs(index, arr) {
+//     if (index >= arr.length) {
+//       isValid = false;
+//       return 0
+//     }
+//     if (arr[index] == "#") return 1;
+//     let leftLen = dfs(index + 1, arr);
+//     let rightLen = dfs(index + 1 + leftLen, arr)
+//     return 1 + leftLen + rightLen
+//   }
+// };
+// 二叉树规律解法
+var isValidSerialization = function (preorder) {
+  const arr = preorder.split(",");
+  const len = arr.length;
+  let enter = 0,
+    out = 0;
+  for (let i = 0; i < len; i++) {
+    if (arr[i] != "#") out += 2;
+    if (i != 0) enter++;
+    if (i != (len - 1) && out <= enter) return false
+  }
+  return enter == out
+};
+// console.log(isValidSerialization("9,3,4,#,#,1,#,#,2,#,6,#,#"));
+console.log(isValidSerialization("1,#,#,#,#"));
