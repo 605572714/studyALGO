@@ -1,6 +1,10 @@
-ListNode = function (val) {
-  this.val = val;
-  this.next = null;
+ListNode = function (val, next) {
+  this.val = val || null;
+  this.next = next || null;
+}
+exports.ListNode = function (val, next) {
+  this.val = val || null;
+  this.next = next || null;
 }
 
 // array->link
