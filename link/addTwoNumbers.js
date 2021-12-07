@@ -43,20 +43,20 @@ var addTwoNumbers = function (l1, l2) {
   console.log(num);
   let sum = (parseInt(num1) + parseInt(num2)).toString();
   console.log(sum);
-  // let head = new ListNode(1);
-  // let node = head
-  // for (let i = 0; i < sum.length; i++) {
-  //   node.next = new ListNode(sum[i])
-  //   node = node.next
-  // }
+  let head = new ListNode(1);
+  let node = head
+  for (let i = 0; i < sum.length; i++) {
+    node.next = new ListNode(sum[i])
+    node = node.next
+  }
+  return head.next
   // console.log(generateArray(head.next));
 };
 
 
 let arr1 = [2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 9];
 let arr2 = [2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 9]
-[5, 6, 4, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 9, 9, 9, 9]
-  ;
+  [5, 6, 4, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 9, 9, 9, 9];
 let link1 = generateLink(arr1);
 let link2 = generateLink(arr2);
 addTwoNumbers(link1, link2)

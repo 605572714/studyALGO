@@ -56,7 +56,7 @@ var minRemoveToMakeValid = function (s) {
     }
   }
   for (let i = 0; i < res.length; i++) {
-    let arr = s.split("").splice(res[i].index - i, 1).join("")
+    let arr = s.split("")
     arr.split(res[i].index - i, 1)
     s = arr.join("")
   }
