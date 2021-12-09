@@ -1,11 +1,6 @@
-// const tree = convertBinaryTree(readline().split(','));
-
-let str = "1,,2,3"
-let arr = str.split(',').map(Number)
-const tree = convertBinaryTree(arr);
 
 
-function convertBinaryTree(arr) {
+exports.convertBinaryTree = function (arr) {
   let root;
 
   let insertNode = function (parentNode, childNode) {
@@ -31,12 +26,12 @@ function convertBinaryTree(arr) {
   return root
 }
 
-let res = []
+// let res = []
 
-function preOrderTraversal(tree) {
-  res.push(tree.val)
-  if (tree.left) preOrderTraversal(tree.left);
-  if (tree.right) preOrderTraversal(tree.right)
-}
-preOrderTraversal(tree)
-console.log(res);
+// function preOrderTraversal (tree) {
+//   res.push(tree.val)
+//   if (tree.left) preOrderTraversal(tree.left);
+//   if (tree.right) preOrderTraversal(tree.right)
+// }
+// preOrderTraversal(tree)
+// console.log(res);
