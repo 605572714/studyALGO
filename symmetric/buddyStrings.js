@@ -45,7 +45,6 @@ var buddyStrings = function (s, goal) {
     let first = null,
       second = null;
     for (let i = 0; i < s.length; i++) {
-      console.log(i);
       if (s[i] != goal[i]) {
         if (first == null) {
           first = i
@@ -56,7 +55,6 @@ var buddyStrings = function (s, goal) {
         }
       }
     }
-    console.log(first, second);
     return s[first] == goal[second] && s[second] == goal[first]
   }
 };
