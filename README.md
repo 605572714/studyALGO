@@ -1,4 +1,13 @@
 # studyALGO 算法学习
+
+第十八套：
+
+1. [二叉搜索树的第k大节点](https://www.notion.so/k-aaec982421b745288d156e2b738e790d) [https://juejin.cn/post/7041389501511368735/](https://juejin.cn/post/7041389501511368735/)
+2. [树的子结构](https://www.notion.so/66c396cacf25475792da7d5b570077a8) [https://juejin.cn/post/7041403697233920037](https://juejin.cn/post/7041403697233920037)
+3. [监控二叉树](https://github.com/605572714/studyALGO/issues/3)：[掘金](https://juejin.cn/post/7041781578543923214/)
+4. 二叉树最大宽度 [https://leetcode-cn.com/problems/maximum-width-of-binary-tree](https://leetcode-cn.com/problems/maximum-width-of-binary-tree)
+5. 二叉树的前序遍历 [https://leetcode-cn.com/problems/binary-tree-preorder-traversal](https://leetcode-cn.com/problems/binary-tree-preorder-traversal)
+
 ## [从尾到头打印链表](link/reversePrint.js)（2021.11.9）
 
 将每个值传入到数组最前面，递归遍历链表
