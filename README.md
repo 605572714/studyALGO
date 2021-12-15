@@ -115,26 +115,21 @@ var hasCycle = function (head) {
 ```
 ---
 
-第二周第1套：[排序算法](https://www.notion.so/d608f93254ea4c478ed32870b797b9d4)：[https://juejin.cn/post/7025641610079633439](https://juejin.cn/post/7025641610079633439)
+第1套：
+
+[排序算法](https://www.notion.so/d608f93254ea4c478ed32870b797b9d4)：[https://juejin.cn/post/7025641610079633439](https://juejin.cn/post/7025641610079633439)
 
 ---
+第2套
 
-第二周第2套算法题来啦~依旧限时两天！
-[好的]话不多说开始吧！
-
-1. [反转链表](https://www.notion.so/be3c2337fef94408be9698b960535dcd)：[https://juejin.cn/post/7026777904570712095](https://juejin.cn/post/7026777904570712095)
-2. [链表相交](https://www.notion.so/be3c2337fef94408be9698b960535dcd)：[https://juejin.cn/post/7026777904570712095](https://juejin.cn/post/7026777904570712095)
-3. [旋转链表](https://www.notion.so/be3c2337fef94408be9698b960535dcd)：[https://juejin.cn/post/7026777904570712095](https://juejin.cn/post/7026777904570712095)
-4. [数据流中的第 K 大元素](https://www.notion.so/be3c2337fef94408be9698b960535dcd)：[https://juejin.cn/post/7026777904570712095](https://juejin.cn/post/7026777904570712095)
-5. [翻转二叉树](https://www.notion.so/be3c2337fef94408be9698b960535dcd)：[https://juejin.cn/post/7026777904570712095](https://juejin.cn/post/7026777904570712095)
-
-这次咱们直接LeetCode刷啦
-收到小小回复个1，就开始刷题8⃣️！
+1. [反转链表](https://github.com/605572714/studyALGO/issues/2)：[掘金](https://juejin.cn/post/7026777904570712095)
+2. [链表相交](https://github.com/605572714/studyALGO/issues/2)：[掘金](https://juejin.cn/post/7026777904570712095)
+3. [旋转链表](https://github.com/605572714/studyALGO/issues/2)：[掘金](https://juejin.cn/post/7026777904570712095)
+4. [数据流中的第 K 大元素](https://github.com/605572714/studyALGO/issues/2)：[掘金](https://juejin.cn/post/7026777904570712095)
+5. [翻转二叉树](https://github.com/605572714/studyALGO/issues/2)：[掘金](https://juejin.cn/post/7026777904570712095)
 
 ---
-
-本周的第三套题提前给到咱们啦，前两套做完就开刷吧
-周一记得分享你的产出哦[奸笑]
+第3套
 
 1. [平衡二叉树](https://www.notion.so/4fa9d7b1cdeb48f695d1427a0ed5ed48)：[https://juejin.cn/post/7028128074382180365](https://juejin.cn/post/7028128074382180365)
 2. [二叉树的深度](https://www.notion.so/98c33ab292124c14b4f07c2fac5687d4)：[https://juejin.cn/post/7028194493606297636](https://juejin.cn/post/7028194493606297636)
@@ -143,8 +138,7 @@ var hasCycle = function (head) {
 5. [反转字符串](https://www.notion.so/344-78e6ecec427343e1bed7a764cf89638d) [https://juejin.cn/post/7035879753970089998/](https://juejin.cn/post/7035879753970089998/)
 
 ---
-
-本周第一套题可以开始刷啦[OK]
+第4套
 
 1. [从尾到头打印链表](https://www.notion.so/Offer-06-5a0a3dc0ccb34dc18389faae98ce4c8f) [https://juejin.cn/post/7035883181148471333/](https://juejin.cn/post/7035883181148471333/)
 2. [返回倒数第 k 个节点](https://www.notion.so/ddc018dcb7e04e1380747c0e5726aaae) [](https://juejin.cn/post/7028457380941660168)：[https://juejin.cn/post/7028457380941660168](https://juejin.cn/post/7028457380941660168)
