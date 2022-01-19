@@ -30,10 +30,6 @@
 // 解释：
 // 输入已经排序，因此不需要翻转任何内容。
 // 请注意，其他可能的答案，如[3，3]，也将被判断为正确。
-
-// 来源：力扣（LeetCode）
-// 链接：https://leetcode-cn.com/problems/pancake-sorting
-// 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 var pancakeSort = function (arr) {
 
   let len = arr.length;
