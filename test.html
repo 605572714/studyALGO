@@ -23,15 +23,5 @@
         console.log(j)
       }
     }
-    var name = 'The Window'
-    var object = {
-      name: 'My object',
-      getNameFunc: function () {
-        return function () {
-          return this.name
-        }
-      },
-    }
-    console.log(object.getNameFunc()()) // "The Window"
   </script>
 </html>
