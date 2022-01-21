@@ -26,7 +26,7 @@
 // 第三步,循环原数组,填入list
 // 第四步，根据list和arr，填入res
 
-function countSort(arr) {
+function countSort (arr) {
   let len = arr.length;
   let res = [];
   let list = [];

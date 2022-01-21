@@ -15,7 +15,6 @@
 // //     let l = "李雷"
 // //     console.log(l + "he" + h);
 // //   }
-
 // // }
 
 
@@ -29,8 +28,6 @@
 // // function H () {
 // //   let h = "韩梅梅"
 // // }
-
-
 
 // function f1 () {
 //   var sum = 0
