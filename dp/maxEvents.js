@@ -55,4 +55,4 @@ var maxEvents = function (events) {
 };
 
 
-maxEvents([[1, 2], [3, 4], [5, 6], [2, 3]])
+// maxEvents([[1, 2], [3, 4], [5, 6], [2, 3]])
