@@ -3,7 +3,7 @@
 ## 每日记录算法学习状态
 
 1. 剑指 Offer 旋转数组的最小数字
-   1. [代码](../studyALGO/sort/minArray.js)
+   1. [代码](../studyALGO/sort/minArray/minArray.js)
    2. [掘金](https://juejin.cn/post/7067068774670663716/)
    3. [力扣](https://leetcode-cn.com/problems/xuan-zhuan-shu-zu-de-zui-xiao-shu-zi-lcof/)
 2. 找到 K 个最接近的元素
