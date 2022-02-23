@@ -62,7 +62,4 @@ var findClosestElements = function (arr, k, x) {
   return arr.slice(low, low + k);
 };
 
-findClosestElements([-2, -1, 1, 2, 3, 4, 5]
-  , 7
-  , 3
-)
+findClosestElements([-2, -1, 1, 2, 3, 4, 5], 7, 3)

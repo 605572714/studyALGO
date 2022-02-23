@@ -3,16 +3,16 @@
 ## 每日记录算法学习状态
 
 1. 剑指 Offer 旋转数组的最小数字
-   1. [代码](../studyALGO/sort/minArray/minArray.js)
+   1. [代码](./sort/minArray/minArray.js)
    2. [掘金](https://juejin.cn/post/7067068774670663716/)
    3. [力扣](https://leetcode-cn.com/problems/xuan-zhuan-shu-zu-de-zui-xiao-shu-zi-lcof/)
 2. 找到 K 个最接近的元素
-   1. [代码]()
-   2. [掘金]()
+   1. [代码](./stackandqueue/findClosestElements/index.js)
+   2. [掘金](https://juejin.cn/post/7067551941437423624)
    3. [力扣](https://leetcode-cn.com/problems/find-k-closest-elements/)
 3. 分糖果
-   1. [代码]()
-   2. [掘金]()
+   1. [代码](./number/distributeCandies/index.js)
+   2. [掘金](https://juejin.cn/post/7067789901768425479)
    3. [力扣](https://leetcode-cn.com/problems/distribute-candies/)
 4. 保证文件名唯一
    1. [代码]()
@@ -40,8 +40,8 @@
    3. [力扣](https://leetcode-cn.com/problems/minimum-depth-of-binary-tree/)
 10. 跳跃游戏 III
     1. [代码]()
-    1. [掘金]()
-    2. [力扣](https://leetcode-cn.com/problems/jump-game-iii/)
+    2. [掘金]()
+    3. [力扣](https://leetcode-cn.com/problems/jump-game-iii/)
 11. 二叉树的堂兄弟节点
     1. [代码]()
     2. [掘金]()
