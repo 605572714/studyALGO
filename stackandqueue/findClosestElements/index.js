@@ -25,23 +25,12 @@ const Heap = require('../heap.js')
  * @param {number} x
  * @return {number[]}
  */
-// var findClosestElements = function (arr, k, x) {
-//   arr.sort((a, b) => (Math.abs(a - x) - Math.abs(b - x) == 0 ? a - b : Math.abs(a - x) - Math.abs(b - x)))
-//   console.log(arr);
-//   let res = arr.splice(0, k).sort((a, b) => a - b)
-//   console.log(res);
-//   // const heap = new Heap((a, b) => (Math.abs(a - x) > Math.abs(b - x)))
-//   // for (let i = 0; i < arr.length; i++) {
-//   //   heap.push(arr[i])
-//   // }
-//   // console.log(heap);
-//   // let res = []
-//   // for (let i = 0; i < arr.length; i++) {
-//   //   res.push(heap.pop())
-//   // }
-//   // console.log(res);
-//   // return res
-// };
+var findClosestElements = function (arr, k, x) {
+  arr.sort((a, b) => (Math.abs(a - x) - Math.abs(b - x) == 0 ? a - b : Math.abs(a - x) - Math.abs(b - x)))
+  console.log(arr);
+  return arr.splice(0, k).sort((a, b) => a - b)
+
+};
 // var findClosestElements = function (arr, k, x) {
 //   const heap = new Heap((a, b) => Math.abs(a - x) == Math.abs(b - x) ? a > b : Math.abs(a - x) > Math.abs(b - x))
 //   for (let i = 0; i < arr.length; i++) {
@@ -54,7 +43,8 @@ const Heap = require('../heap.js')
 //   return res.sort((a, b) => a - b)
 // };
 var findClosestElements = function (arr, k, x) {
-  let low = 0, high = arr.length - 1;
+  let low = 0,
+    high = arr.length - 1;
   while (low < high) {
     const mid = low + Math.floor((high - low) / 2);
     x - arr[mid] > arr[mid + k] - x ? low = mid + 1 : high = mid;
