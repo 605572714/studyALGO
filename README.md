@@ -1,6 +1,14 @@
 # studyALGO 算法学习
 
 ## 每日记录算法学习状态
+23. 跳跃游戏 II
+    1. [代码](./dp/solveNQueens.js)
+    2. [掘金](https://juejin.cn/post/7078565384256913415)
+    3. [力扣](https://leetcode-cn.com/problems/jump-game-ii/submissions/)
+23. N 皇后
+    1. [代码](./dp/solveNQueens.js)
+    2. [掘金](https://juejin.cn/post/7077548814906687525)
+    3. [力扣](https://leetcode-cn.com/problems/n-queens/)
 1. 滑动窗口最大值
    1. [代码](./date/136/maxSlidingWindow.js)
    2. [掘金](https://juejin.cn/post/7073031559527268382/)
@@ -89,7 +97,4 @@
     1. [代码]()
     2. [掘金]()
     3. [力扣](https://leetcode-cn.com/problems/combination-sum/)
-23. N 皇后
-    1. [代码]()
-    2. [掘金]()
-    3. [力扣](https://leetcode-cn.com/problems/n-queens/)
+
