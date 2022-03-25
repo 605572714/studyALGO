@@ -63,28 +63,58 @@
 //   console.log(dp(k, n))
 // };
 // 第三版，加入二分
-var superEggDrop = function (k, n) {
-  const memo = new Map()
-  function dp (k, n) {
-    if (!memo.has(n * 100 + k)) {
-      if (k === 0 || n === 0) return 0
-      if (k === 1) return n
-      if (n === 1) return 1
-      let ans = null
-      // 二分查找
-      let low = 1, high = n, ans1, ans2
-      while (low + 1 < high) {
-        let x = (low + high) >> 1
-        ans1 = dp(k - 1, x - 1)
-        ans2 = dp(k, n - x)
-        if (ans1 < ans2) low = x
-        else high = x
-      }
+// var superEggDrop = function (k, n) {
+//   const memo = new Map()
+//   function dp (k, n) {
+//     if (!memo.has(n * 100 + k)) {
+//       if (k === 0 || n === 0) return 0
+//       if (k === 1) return n
+//       if (n === 1) return 1
+//       let ans = null
+//       // 二分查找
+//       let low = 1, high = n, ans1, ans2
+//       while (low + 1 < high) {
+//         let x = (low + high) >> 1
+//         ans1 = dp(k - 1, x - 1)
+//         ans2 = dp(k, n - x)
+//         if (ans1 < ans2) low = x
+//         else high = x
+//       }
 
-      memo.set(n * 100 + k, ans)
+//       memo.set(n * 100 + k, ans)
+//     }
+//     console.log(memo);
+//     return memo.get(n * 100 + k)
+//   }
+//   console.log(dp(k, n))
+// };
+/**
+ * @param {number} k
+ * @param {number} n
+ * @return {number}
+ */
+let superEggDrop = (k, n) => {
+  // 特判，如果只有一枚鸡蛋，返回楼层数
+  if (k === 1) return n;
+  if (n <= 1) return n
+  // / 初始化 dp 数组
+  const dp = Array(k + 1).fill(0);
+  // 初始化操作次数
+  let num = 0;
+  // 当 dp[num][k] 小于目标楼层的时候，递增操作次数，直到可以测出目标楼层
+  // 要注意的是这里的 num 没没有表现在 dp 数组中，但是是切实存在的
+  while (dp[k] < n) {
+    // 递增操作次数
+    num++;
+    // 推导 dp
+    for (let i = k; i > 0; i--) {
+      dp[i] = dp[i - 1] + 1 + dp[i]
     }
-    return memo.get(n * 100 + k)
+    console.log(num, dp);
   }
-  console.log(dp(k, n))
+  console.log(num);
+  // 返回操作次数
+  return num;
 };
-superEggDrop(3, 26)
+
+superEggDrop(2, 26)
