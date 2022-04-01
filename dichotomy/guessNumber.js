@@ -39,5 +39,3 @@ var guessNumber = function (n) {
   }
   return num
 };
-
-
