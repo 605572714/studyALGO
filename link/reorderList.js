@@ -82,20 +82,7 @@ let {
 //   return arr[0]
 // }
 var reorderList = function (head) {
-  reorder(head, head)
-
-  function reorder(head, tail) {
-    if (!tail) return head;
-    let returnNode = new ListNode(reorder(head, tail.next));
-    if (!returnNode) return null;
-    if (returnNode == tail || returnNode.next == tail) {
-      tail.next == null;
-      return null
-    }
-    tail.next = returnNode.next;
-    returnNode.next = tail
-    return tail.next
-  }
+  let 
 
 }
 
