@@ -24,6 +24,22 @@
  * @param {number} n
  * @return {string[]}
  */
+/**
+ * @param {number} n
+ * @return {string[]}
+ */
 var generateParenthesis = function (n) {
+  const res = []
 
+  function dfs(l, r, s) {
+    if (l === 0 && r === 0) {
+      res.push(s)
+      return
+    }
+    if (l > r) return
+    if (l > 0) dfs(l - 1, r, s + '(')
+    if (r > 0) dfs(l, r - 1, s + ')')
+  }
+  dfs(n, n, '')
+  return res
 };
