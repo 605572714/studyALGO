@@ -1,5 +1,3 @@
-
-
 (
   function () {
     let _likeSetInterval;
@@ -7,19 +5,23 @@
     let _index = 0;
     let _scrollTopSize;
     _scrollTopSize = document.querySelector("html").scrollTop
-    function getMyLike (flag) {
+
+    function getMyLike(flag) {
       return [...document.querySelectorAll('li.like')].filter((item) => flag ? !item.className.includes('active') : item.className.includes('active'))
     }
 
-    function _likeFilter (arr, flag) {
+    function _likeFilter(arr, flag) {
       return arr.filter((item) => flag ? !item.className.includes('active') : item.className.includes('active'))
     }
 
-    function _MathRandom () {
+    function _MathRandom() {
       return (Math.random() * 2000) + 1000
     }
-    function getScrollTop () {
-      let scrollTop = 0, bodyScrollTop = 0, documentScrollTop = 0;
+
+    function getScrollTop() {
+      let scrollTop = 0,
+        bodyScrollTop = 0,
+        documentScrollTop = 0;
       if (document.body) {
         bodyScrollTop = document.body.scrollTop;
       }
@@ -30,8 +32,10 @@
       return scrollTop;
     }
 
-    function getScrollHeight () {
-      let scrollHeight = 0, bodyScrollHeight = 0, documentScrollHeight = 0;
+    function getScrollHeight() {
+      let scrollHeight = 0,
+        bodyScrollHeight = 0,
+        documentScrollHeight = 0;
       if (document.body) {
         bodyScrollHeight = document.body.scrollHeight;
       }
@@ -42,7 +46,7 @@
       return scrollHeight;
     }
 
-    function getWindowHeight () {
+    function getWindowHeight() {
       let windowHeight = 0;
       if (document.compatMode == "CSS1Compat") {
         windowHeight = document.documentElement.clientHeight;
@@ -52,7 +56,7 @@
       return windowHeight;
     }
 
-    function _scrollTop () {
+    function _scrollTop() {
       _scrollSetInterval = setInterval(() => {
         if (Math.ceil(getScrollTop() + getWindowHeight()) == getScrollHeight()) {
           console.log('到底了')
@@ -67,7 +71,7 @@
      * 点赞/取消点赞
      * @param args 0 取消 1 点赞 默认 1
      */
-    function fabulous (args = 1) {
+    function fabulous(args = 1) {
       _scrollTop();
       _likeSetInterval = setInterval(() => {
         let _like = getMyLike(args);
@@ -83,4 +87,7 @@
       fabulous: fabulous
     }
   })()
-$.fabulous();//0 取消 1 点赞 默认 1
+$.fabulous(); //0 取消 1 点赞 默认 1
+
+
+// vim
