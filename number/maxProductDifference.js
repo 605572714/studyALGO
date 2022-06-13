@@ -27,21 +27,19 @@
  * @param {number[]} nums
  * @return {number}
  */
-var maxProductDifference = function (nums) {
+// var maxProductDifference = function (nums) {
 
-};
-class Solution {
-  public:
-    int maxProductDifference (vector <int >& nums) {
-          int n = nums.size();
-          // 数组中最大的两个值
-          int mx1 = max(nums[0], nums[1]);
-          int mx2 = min(nums[0], nums[1]);
-          // 数组中最小的两个值
-          int mn1 = min(nums[0], nums[1]);
-          int mn2 = max(nums[0], nums[1]);
-  for (int i = 2; i < n; ++i) {
-              int tmp = nums[i];
+// };
+var maxProductDifference = function (nums) {
+  let n = nums.size();
+  // 数组中最大的两个值
+  let mx1 = max(nums[0], nums[1]);
+  let mx2 = min(nums[0], nums[1]);
+  // 数组中最小的两个值
+  let mn1 = min(nums[0], nums[1]);
+  let mn2 = max(nums[0], nums[1]);
+  for (let i = 2; i < n; ++i) {
+    let tmp = nums[i];
     if (tmp > mx1) {
       mx2 = mx1;
       mx1 = tmp;
@@ -59,4 +57,3 @@ class Solution {
   }
   return (mx1 * mx2) - (mn1 * mn2);
 }
-};
