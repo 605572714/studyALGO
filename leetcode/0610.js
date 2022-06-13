@@ -32,6 +32,6 @@
  */
 var countPalindromicSubsequences = function (s) {
   const MOD = 1000000007;
-  const n = s.length;
+  const n = s.lengt
   const dp = new Array(4).fill(0).map(() => new Array(n).fill(0).map(() => new Array(n).fill(0)));
 };
